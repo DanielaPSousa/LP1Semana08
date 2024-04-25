@@ -1,12 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace 
+namespace AnimalKingdom
 {
-    public class IMammal
+    public interface IMammal
     {
-        
+        int NumberOfNipples { get; }
     }
 }
