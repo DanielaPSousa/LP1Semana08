@@ -123,7 +123,7 @@ namespace PlayerManager3 // >>> Change to PlayerManager2 for exercise 4 <<< //
         private static void ListPlayers(IEnumerable<Player> playersToList)
         {
             Console.WriteLine("\nAll Players");
-            foreach (var player in playersToList)
+            foreach (var player in playersToList.OrderBy(p => p.Score))
             {
                 Console.WriteLine($"Name {player.Name}, Score {player.Score}");
             }
@@ -141,7 +141,7 @@ namespace PlayerManager3 // >>> Change to PlayerManager2 for exercise 4 <<< //
                 Console.WriteLine("Invalid input. Please enter a number.");
             }
 
-            var playersWithHighScore = GetPlayersWithScoreGreaterThan(threshold);
+            var playersWithHighScore = GetPlayersWithScoreGreaterThan(threshold).OrderBy(p => p.Score);
             ListPlayers(playersWithHighScore);
         }
 
