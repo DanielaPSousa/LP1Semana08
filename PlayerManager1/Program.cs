@@ -135,9 +135,15 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </summary>
         private void ListPlayersWithScoreGreaterThan()
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            Console.Write("Enter the score threshold: ");
+            int threshold;
+            while (int.TryParse(Console.ReadLine(), out threshold))
+            {
+                Console.WriteLine("Invalid input. Please enter a number.");
+            }
+
+            var playersWithHighScore = GetPlayersWithScoreGreaterThan(threshold);
+            ListPlayers(playersWithHighScore);
         }
 
         /// <summary>
