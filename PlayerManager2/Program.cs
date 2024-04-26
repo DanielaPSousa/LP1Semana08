@@ -155,7 +155,7 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </returns>
         private IEnumerable<Player> GetPlayersWithScoreGreaterThan(int minScore)
         {
-            return playerList.Where(player => player.Score > minScore);
+            yield return playerList
         }
     }
 }
